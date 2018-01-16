@@ -41,11 +41,17 @@ When you start the app-metrics-to-influxdb.jar service you can see in the follow
 
 ## Data in graph
 
+* Microservice 2.
+
 ![alt](images/image3.png)
 
+* Microservice 1.
 
 ![alt](images/image4.png)
 
+* Microservice 1 & Microservice 2.
+
+![alt](images/image7.png)
 
 ## Summary
  You can build multiple graphics, everything is in your imagination. Grafana is a really flexible tool and adapts to any need, I particularly prefer this solution before using spring boot dashboard. In the doc folder the dashborad is present, you only have to import it in Grafana and that's it.
