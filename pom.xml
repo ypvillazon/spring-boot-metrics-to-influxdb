@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- Spring IO Platform is the parent of the generated application to
+    be able to use Spring Boot and all its default configuration -->
+    <parent>
+        <groupId>io.spring.platform</groupId>
+        <artifactId>platform-bom</artifactId>
+        <version>2.0.3.RELEASE</version>
+    </parent>
+
+    <groupId>cu.ypvillazon.springboot.metricstoinfluxdb</groupId>
+    <artifactId>cu.ypvillazon.springboot.metricstoinfluxdb</artifactId>
+    <version>0.0.1-DEVELOP</version>
+    <packaging>pom</packaging>
+
+    <name>Metrics to influxdb</name>
+    <description>Project that allows to collect the metrics provided by the spring-actuator and send them to the InfluxDB time series database and monitor this data with Grafana.</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <modules>
+        <module>app.discovery.service</module>
+        <module>app.metrics-to-influxdb.service</module>
+        <module>microservice.service.1</module>
+        <module>microservice.service.2</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Brixton.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
+

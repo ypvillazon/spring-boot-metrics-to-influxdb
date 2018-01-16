@@ -1,0 +1,37 @@
+server:
+  port: 2000
+
+infludb:
+    server:
+        host: 127.0.0.1
+        port: 8086
+        dbname: influxdb1
+        username: root
+        password: root
+        retentionPolicy: default
+
+    metrics: mem,mem.free,processors,instance.uptime,uptime,systemload.average,heap.committed,heap.init,heap.used,heap,nonheap.committed,nonheap.init,nonheap.used,nonheap,threads.peak,threads.daemon,threads.totalStarted,threads
+
+application:
+    services:
+       - name: Service 1
+         serviceId: ms-service-1
+         description: Service 1
+       - name: Service 2
+         serviceId: ms-service-2
+         description: Service 1
+
+spring:
+    application:
+        name: metric-to-influxdb-service
+
+eureka:
+    instance:
+        preferIpAddress: true
+    client:
+        registerWithEureka: true
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+        enabled: true
+
+

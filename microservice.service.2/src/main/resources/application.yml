@@ -1,0 +1,32 @@
+server:  
+  port: 2002
+
+spring:
+    application:
+        name: ms-service-2
+
+eureka:  
+  client:
+    serviceUrl:
+      defaultZone: ${DISCOVERY_URL:http://localhost:8761}/eureka/
+  enabled: true
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+      
+ribbon:
+  eureka:
+    enabled: true
+
+microservice:
+    title: Microservice service 2.
+    description: Microservice service 2.
+    version: 0.0.1
+    termsOfServiceUrl: Terminos legales
+    contact:
+        name: MyName
+        website: http://mysite.com
+        email: username@mydomain.com
+    license:
+        name: Licence name
+        website: http://mysite.com
