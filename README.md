@@ -37,6 +37,8 @@ $ java -XX:+UseG1GC -Xmx80m -Xms32m -jar app-metrics-to-influxdb.jar
 ----
 When you start the app-metrics-to-influxdb.jar service you can see in the following image how the registered applications in Eureka Server are obtained and the metrics specified in the application.yml file are sent for InfluxDB. The connection data for InfluxDB as well as the services that you want your metrics to be monitored are specified in that same file.
 
+![alt](images/image5.png)
+
 ## Data in graph
 
 ![alt](images/image3.png)
